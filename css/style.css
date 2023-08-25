@@ -1,0 +1,223 @@
+*{
+    position: inherit;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkslateblue;
+}
+
+.first-header{
+    background-color: darkslateblue;
+}
+.logo-image{
+    height: 40px;
+}
+.header-area{
+    background-image: url('/img/banner.png');
+    height: 1024px;
+    max-height: 1024px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-image{
+    height: 100%;
+    width: 100%;
+    animation-name: fillUp;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fillUp{
+    from{
+        height: 0%;
+        width: 0%;
+    }
+    to{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .first-header{
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+    .py-2{
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
+    .header-area{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .home-image{
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .header-bottom{
+        max-width: 100%;
+        max-height: 100%;
+        width: 300px;
+        height: 100%;
+    }
+
+}
+.btn-wrapper{
+    padding: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+}
+
+.custom-line{
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+    max-width: 100%;
+    padding: 20px;
+}
+.auto-height{
+    position:relative;
+    top: 30%;
+}
+
+.trail{
+    padding: 10px;
+    margin-top: 20px;
+    width: 50%;
+    border: 1px solid #bd7406;
+    background-color: #dd9f41;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.home-message{
+    text-transform: capitalize;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px #4b4947;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.header-bottom{
+    width: 800px;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(40%);
+    transition: all 1s ease-out;
+}
+
+.active{
+    opacity: 4;
+    transform: translateY(0%);
+}
+
+.clinets{
+    font-family: "Sofia", sans-serif;
+}
+.clinets h1{
+    margin-top: 50px;
+}
+.clients-images{
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 10px;
+}
+.clients-images img{
+    width: 150px;
+    padding: 20px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 10px 0px #fff;
+}
+.features{
+    margin-top: 50px;
+    padding: 20px;
+}
+.feature-image{
+    width: 90%;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 10px 0px #fff;
+}
+.client-div{
+    background-image: url('img/backmessage.png');
+}
+.join-now{
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+footer{
+    background-color: darkslateblue;
+    color: white;
+    padding: 20px;
+}
+
+.pricing-background{
+    background: linear-gradient(90deg, #73c7df 0%, #85e78f 100%);
+}
+
+.card {
+    border:none;
+    padding: 10px 50px;
+}
+
+.card-header-pricing {
+    background: linear-gradient(90deg, #007bff 10% , #1165c0 100%);
+    padding: 10px;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.card::after {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card:hover {
+    transform: scale(1.02, 1.02);
+    -webkit-transform: scale(1.02, 1.02);
+    backface-visibility: hidden; 
+    will-change: transform;
+    box-shadow: 0 1rem 3rem rgba(158, 10, 10, 0.75) !important;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card:hover .btn-outline-primary{
+    color:white;
+    background:#007bff;
+}
+.download-app{
+    background: linear-gradient(90deg, #9898f1 0% , #0569d4 100%);
+    color: white;
+}
